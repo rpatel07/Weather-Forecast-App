@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "echo \"No build step required for this project.\"",
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -17,5 +18,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "A Node.js API project for capstone."
 }
