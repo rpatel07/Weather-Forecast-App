@@ -2,15 +2,15 @@ import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
 
-const port = 3000;
+
 const app = express();
 const API_KEY = "23f47a09d4msh95edea3a961ca40p119fc8jsnf948409fe292";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.listen(port, () => {
-    console.log(`Listening on ${port}`);
+app.listen(3000, () => {
+    console.log(`Listening on ${3000}`);
 });
 
 app.get("/", (req, res) => {
