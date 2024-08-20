@@ -42,9 +42,9 @@
                     <div class="two d-flex">
                         <div class="temp_div">
                             <h1>Temp</h1>
-                            <h1><%= info.temp %>&deg;</h1>
+                            <h1><%= info.main.temp %>&deg;</h1>
                         </div>
-                        <div class="shadowLine flex-grow-1 ">
+                        <div class="shadowLine flex-grow-1">
                             <div class="d-flex">
                                 <div>
                                     <!-- Location icon -->
@@ -58,15 +58,13 @@
                                 <div class="mx-2">
                                     <!-- Display location name, region, and country -->
                                     <h3><%= placeName %></h3>
-                                    
                                 </div>
                             </div>
-                        
+                        </div>
                     </div>
                 </div>
                 <div class="box_two">
                     <div class="three">
-                        
                         <div class="sub-three justify-content-around">
                             <div>
                                 <!-- Display humidity information -->
@@ -81,15 +79,13 @@
                                        </svg> 
                                     </div>
                                     <!-- Display humidity percentage -->
-                                    <h2><%= info.humidity %>% </h2>
+                                    <h2><%= info.main.humidity %>% </h2>
                                 </div>
                             </div>
                             <!-- Line separator -->
                             <div class="left_line"></div>
-                            
                             <!-- Line separator -->
                             <div class="left_line"></div>
-                           
                             <!-- Line separator -->
                             <div class="left_line"></div>
                             <div>
@@ -105,7 +101,7 @@
                                         </svg>
                                     </div>
                                     <!-- Display wind speed value -->
-                                    <h2> <%= info.wind_speed %>m/s </h2>
+                                    <h2> <%= info.wind.speed %> m/s </h2>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +117,7 @@
                             <!-- Subtitle for feels like temperature -->
                             <p style="margin: 0;">Feels like</p>
                             <!-- Display feels like temperature -->
-                            <h2 style="margin-bottom: 30px;"> <%= info.feels_like %>° </h2>
+                            <h2 style="margin-bottom: 30px;"> <%= info.main.feels_like %>° </h2>
                         </div>
                         <div class="sub-four">
                             <!-- Sub-section for wind direction -->
@@ -132,7 +128,7 @@
                                 </div>
                                 <div>
                                     <!-- Display wind direction -->
-                                    <p> <%= info.wind_degrees %> </p>
+                                    <p> <%= info.wind.deg %> </p>
                                 </div>
                             </div>
                             <hr>
@@ -144,26 +140,27 @@
                                 </div>
                                 <div>
                                     <!-- Display cloud cover percentage -->
-                                    <p> <%= info.cloud_pct %>% </p>
+                                    <p> <%= info.clouds.all %>% </p>
                                 </div>
                             </div>
-                        
-                        
                             <hr>
                         </div>
                     </div>
-                    <% } else { %>
-                       
                 </div>
-                <% } %> <!-- Closing tag for any open EJS control structures -->
             </div>
-
-            <footer>    
-                <!-- Footer section displaying copyright information -->
-                <p style="text-align: center;">Copyright © Rishi Patel <%= new Date().getFullYear() %></p>
-            </footer>
+        <% } else { %>
+            <!-- Placeholder for when there is no weather data -->
+            <div class="box_one">
+                <div class="two d-flex">
+                    <h2>No weather data available. Please enter a valid city name.</h2>
+                </div>
+            </div>
+        <% } %>
     </div>
 
-
+    <footer>
+        <!-- Footer section displaying copyright information -->
+        <p style="text-align: center;">Copyright © Rishi Patel <%= new Date().getFullYear() %></p>
+    </footer>
 </body>
 </html>
