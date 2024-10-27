@@ -75,7 +75,7 @@ span {
 .btn {
     height: 100%;
     padding: 0;
-    outline: 0; /* Remove outline on focus */
+    outline: 0; 
     border: none; /* Remove border */
 }
 
@@ -281,6 +281,3 @@ svg {
     background-color: #E0C14D;
 }
 
-.btn:active {
-    background-color: #D1AE3B;
-}
